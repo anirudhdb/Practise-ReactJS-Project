@@ -7,16 +7,25 @@ import 'react-datepicker/dist/react-datepicker.css'
 function App() {
 
   const [selectedDate, setSelectedDate] = useState(null);
+  const [fname,setFname] = useState([]);
+  const[lname,setLname] = useState([]);
+  const [name,setName] = useState("");
+
+  const handleClick = () => {
+    setFname([...fname,document.getElementById('firstname').value]);
+    setLname([...lname,document.getElementById('lastname').value]);
+
+};
 
    
   return (
     <div className='box'>
 
-      <button className='btn' id='entryButoon'>Save</button>
+      <button className='btn' id='entryButoon' onClick={handleClick}>Save</button>
       <div className='fname' id='fname'>First Name
-      <input type={String}   placeholder="First Name" ></input>
+      <input type={String}   placeholder="First Name" id='firstname'  ></input>
       </div>
-      <div className='lname' id='lname'>Last Name
+      <div className='lname' id='lastname'>Last Name
       <input type={String} placeholder="Last Name"></input>
       </div>
       <div className='emailid' id='email'>Email-id
@@ -32,7 +41,15 @@ function App() {
          />
       </div>
       </div>
+      <div>
+        {fname.map((curElem,index) =>{
+          return( 
+          <h3>{curElem}</h3>
+          )
+        })}  
+      </div>
         </div>
+  
     
     
    
