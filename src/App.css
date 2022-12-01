@@ -1,0 +1,45 @@
+.box{
+  width: 800px;
+  height: 600px;
+  border: 2px solid black;
+  margin : 20px auto;
+}
+
+.btn{
+  float: right;
+}
+
+.fname{
+  
+  margin-top: 60px;
+  width: 50%;
+  float: left;
+  position: relative;
+  
+   
+}
+
+.lname{
+  margin-top: 35px;
+  width: 50%;
+  float: right;
+
+}
+
+.fbox{
+  margin-top: 50px;
+
+}
+
+.email{
+  float: right;
+}
+
+.emailid{
+  float: left;
+}
+
+.dob{
+  margin-left: 100px;
+  margin-top: 120px;
+}
